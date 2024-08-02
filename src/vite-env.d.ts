@@ -15,12 +15,29 @@ interface IMovie {
   video: boolean
   vote_average: number
   vote_count: number
-  key: string
 }
 
 interface IMovies {
   page: number
-  results: IResult[]
+  results: IMovie[]
   total_pages: number
   total_results: number
+}
+
+interface IVideo {
+  id: string
+  iso_639_1: string
+  iso_3166_1: string
+  key: string
+  name: string
+  official: boolean
+  published_at: string
+  site: string
+  size: number
+  type: string
+}
+
+interface IVideos {
+  id: number
+  results: IVideo[]
 }

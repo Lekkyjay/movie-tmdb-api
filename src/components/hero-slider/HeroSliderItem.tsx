@@ -18,7 +18,7 @@ export default function HeroSliderItem(props: IProps) {
     const modal = document.querySelector(`#modal_${item.id}`)
 
     const videos = await tmdbApi.getVideos(category.movie, item.id)
-    console.log({videos})
+    // console.log('videos....:', {videos})
 
     if (videos.results.length > 0) {
       const videSrc = 'https://www.youtube.com/embed/' + videos.results[0].key

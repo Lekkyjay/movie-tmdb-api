@@ -31,7 +31,7 @@ const tmdbApi = {
   //TV SERIES > Videos
   getVideos: (cat: string, id: string) => {
     const url = category[cat as keyof typeof category] + '/' + id + '/videos'
-    return customAxios.get<any, IMovies>(url, {params: {}})
+    return customAxios.get<any, IVideos>(url, {params: {}})
   },
   search: (cat: string, params: any) => {
     const url = 'search/' + category[cat as keyof typeof category]
