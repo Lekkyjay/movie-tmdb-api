@@ -1,5 +1,9 @@
+import HeroSlider from '../components/hero-slider/HeroSlider'
+
 export default function Home() {
   return (
-    <div>Home</div>
+    <>
+      <HeroSlider />
+    </>
   )
 }

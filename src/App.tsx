@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import 'swiper/css'
 import tmdbApi from './api/tmdbApi'
 import Layout from './components/Layout'
 import Home from './pages/Home'

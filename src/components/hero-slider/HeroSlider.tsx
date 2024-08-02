@@ -16,9 +16,10 @@ export default function HeroSlider() {
     const getMovies = async () => {
       const params = {page: 1}
       try {
-        const response = await tmdbApi.getMoviesList(movieType.popular, params)
+        const response = await tmdbApi.getMoviesList(movieType.popular, {params})
         setMovieItems(response.results.slice(1, 4))
-      } catch(err) {
+      } 
+      catch(err) {
         console.log(err)
       }
     }
