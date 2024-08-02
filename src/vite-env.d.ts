@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
 
-interface IResult {
+interface IMovie {
   adult: boolean
   backdrop_path: string
   genre_ids: number[]
-  id: number
+  id: string
   original_language: string
   original_title: string
   overview: string
@@ -15,9 +15,10 @@ interface IResult {
   video: boolean
   vote_average: number
   vote_count: number
+  key: string
 }
 
-interface IResults {
+interface IMovies {
   page: number
   results: IResult[]
   total_pages: number
