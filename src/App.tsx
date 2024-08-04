@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import 'swiper/css'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Catalog from './pages/Catalog'
 import Detail from './pages/detail/Detail'
+import './assets/boxicons-2.0.7/css/boxicons.min.css'
+import 'swiper/css'
 import './App.scss'
 
 function App() {

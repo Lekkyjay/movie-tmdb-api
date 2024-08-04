@@ -26,7 +26,7 @@ const tmdbApi = {
   //TV SERIES LISTS
   getTvList: (type: string, params: any) => {
     const url = 'tv/' + tvSeriesType[type as keyof typeof tvSeriesType]
-    return customAxios.get<any, IMovies>(url, params)
+    return customAxios.get<any, ITvs>(url, params)
   },
   //TV SERIES > Videos
   getVideos: (cat: string, id: string) => {
@@ -48,7 +48,7 @@ const tmdbApi = {
   },
   similar: (cat: string, id: string) => {
     const url = category[cat as keyof typeof category] + '/' + id + '/similar'
-    return customAxios.get(url, {params: {}})
+    return customAxios.get<any, ITvs>(url, {params: {}})
   }
 }
 
