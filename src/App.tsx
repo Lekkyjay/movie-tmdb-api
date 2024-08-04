@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'swiper/css'
-import tmdbApi from './api/tmdbApi'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Catalog from './pages/Catalog'
@@ -9,19 +7,6 @@ import Detail from './pages/detail/Detail'
 import './App.scss'
 
 function App() {
-  const [items, setItems] = useState<any>([])
-
-  useEffect(() => {
-    const getList = async () => {
-      let response = null;
-      const params = {};
-      response = await tmdbApi.getMoviesList('popular', {params})
-      console.log(response)
-      setItems(response.results)
-    }
-    getList()
-  }, [])
-
   const router = createBrowserRouter([
     {
       path: "/",
