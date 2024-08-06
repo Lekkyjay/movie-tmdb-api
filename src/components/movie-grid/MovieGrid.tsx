@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import tmdbApi, { category, movieType, tvSeriesType } from '../../api/tmdbApi'
 import OutlineButton from '../button/OutlineButton'
 import MovieCard from '../movie-card/MovieCard'
+import MovieSearch from '../movie-search/MovieSearch'
 import './movie-grid.scss'
 
 interface IProps {
@@ -61,7 +62,7 @@ export default function MovieGrid(props: IProps) {
   return (
     <>
       <div className="section mb-3">
-        MovieSearch
+      <MovieSearch category={props.category} keyword={keyword ? keyword : ''}/>
       </div>
       <div className="movie-grid">
         { items.map((item, i) => <MovieCard category={props.category} item={item} key={i}/>) }
