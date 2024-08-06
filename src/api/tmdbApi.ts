@@ -21,12 +21,12 @@ const tmdbApi = {
   //MOVIES > Lists
   getMoviesList: (type: string, params: any) => {
     const url = 'movie/' + movieType[type as keyof typeof movieType]
-    return customAxios.get<any, IMovies>(url, params)
+    return customAxios.get<any, ITvsIMovies>(url, params)
   },
   //TV SERIES LISTS
   getTvList: (type: string, params: any) => {
     const url = 'tv/' + tvSeriesType[type as keyof typeof tvSeriesType]
-    return customAxios.get<any, ITvs>(url, params)
+    return customAxios.get<any, ITvsIMovies>(url, params)
   },
   //TV SERIES > Videos
   getVideos: (cat: string, id: string) => {
@@ -35,7 +35,7 @@ const tmdbApi = {
   },
   search: (cat: string, params: any) => {
     const url = 'search/' + category[cat as keyof typeof category]
-    return customAxios.get(url, params)
+    return customAxios.get<any, ITvsIMovies>(url, params)
   },
   //MOVIES > Details
   detail: (cat: string, id: string, params: any) => {

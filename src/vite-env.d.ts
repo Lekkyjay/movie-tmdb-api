@@ -65,3 +65,17 @@ interface ITvs {
   total_pages: number
   total_results: number
 }
+
+interface ITvIMovie extends IMovie {
+  first_air_date: string
+  name: string
+  origin_country: string[]
+  original_name: string
+}
+
+interface ITvsIMovies {
+  page: number
+  results: ITvIMovie[]
+  total_pages: number
+  total_results: number
+}
