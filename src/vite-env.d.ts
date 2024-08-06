@@ -79,3 +79,53 @@ interface ITvsIMovies {
   total_pages: number
   total_results: number
 }
+
+interface IGenre {
+  id: number
+  name: string
+}
+
+interface IMovieItem {
+  backdrop_path: string
+  poster_path: string
+  overview: string
+  title: string
+  name: string
+  id: string
+  genres: IGenre[]
+}
+
+interface ICast {
+  adult: boolean
+  cast_id: number
+  character: string
+  credit_id: string
+  gender: number
+  id: string
+  known_for_department: string
+  name: string
+  order: number
+  original_name: string
+  popularity: number
+  profile_path: string
+}
+
+interface ICrew {
+  adult: boolean
+  credit_id: string
+  department: string
+  gender: number
+  id: string
+  job: string
+  known_for_department: string
+  name: string
+  original_name: string
+  popularity: number
+  profile_path: string
+}
+
+interface IDetail {
+  id: string
+  cast: ICast[]
+  crew: ICrew[]
+}

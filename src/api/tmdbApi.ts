@@ -40,11 +40,11 @@ const tmdbApi = {
   //MOVIES > Details
   detail: (cat: string, id: string, params: any) => {
     const url = category[cat as keyof typeof category] + '/' + id
-    return customAxios.get(url, params)
+    return customAxios.get<any, IMovieItem>(url, params)
   },
   credits: (cat: string, id: string) => {
     const url = category[cat as keyof typeof category] + '/' + id + '/credits'
-    return customAxios.get(url, {params: {}})
+    return customAxios.get<any, IDetail>(url, {params: {}})
   },
   similar: (cat: string, id: string) => {
     const url = category[cat as keyof typeof category] + '/' + id + '/similar'
