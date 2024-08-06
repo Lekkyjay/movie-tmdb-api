@@ -9,7 +9,7 @@ export default function Catalog() {
   return (
     <>
       <PageHeader>
-        {category === categ.movie ? 'Movies' : 'TV Series'}
+        {category === categ.movie ? 'Popular Movies' : 'Popular TV Series'}
       </PageHeader>
       <div className="container">
         <div className="section mb-3">
