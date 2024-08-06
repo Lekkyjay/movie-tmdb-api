@@ -27,7 +27,7 @@ export default function MovieList(props: IProps) {
             response = await tmdbApi.getTvList(props.type, { params })
         }
       } else {
-        response = await tmdbApi.similar(props.category, '1')
+        response = await tmdbApi.similar(props.category, props.id!)
       }
       setItems(response.results)
     }
